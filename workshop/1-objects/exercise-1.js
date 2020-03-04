@@ -20,6 +20,27 @@
 // B) console.log() a few of the values in the object.
 
 //-------------------------------------------------
+myObject = {
+        name: {
+            first: 'Paul',
+            last: 'Susset',
+        },
+        age: '26',
+        city: 'Montreal',
+        siblings: 2,
+        petName: 'Minoushka',
+        monthOfBirth: 'April',
+        faveSport: 'Bball',
+        Occupation: 'student',
+        pets: {
+            number: 2,
+            cats: {
+                nameYoung: 'migouitsh',
+                nameOld: 'minoushka'
+            }
+        }
+    }
+    console.log(myObject)
 
 // Exercise 1.1
 // ------------
@@ -48,7 +69,11 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
+    title: 'the godfather',
+    director: 'FFCoppola',
+    release: '1972', 
+    rating: '9.2',
+    Actors: ['Marlon Brando', 'Al Pacino', 'James Caan']
 }
 
 
@@ -65,8 +90,8 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+person.age;    // => 26
+console.log(person[key]);     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -89,8 +114,9 @@ const alyssa = {
 };
 
 function fullName(person) {
-    // Your code here
-
+    let allName = Object.values(person.name)
+    let stringgg = allName.join(' ')
+    return stringgg
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -114,7 +140,9 @@ const rick = {
 };
 
 function betterFullName(person) {
-    // Your code here
+    let allName = Object.values(person.name)
+    let stringgg = allName.join(' ')
+    return stringgg
 
 }
 
